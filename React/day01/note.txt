@@ -1,0 +1,128 @@
+134.175.154.93:8888
+
+基于MVC思想的框架（后台主导开发）
+servlet\jsp；    springmvc/jsp  ； struts2/jsp;
+页面的服务器端渲染完成（html），在浏览器中打开（html）
+m     model    bean  POJO类
+v     view     jsp  jstl标签库
+c     controller     setAttribute
+		请求--->页面
+基于MVVM的思想的框架
+m   model     js对象    js数组
+v   view     html/组件
+vm  viewmodel     数据单向绑定    数据双向绑定    描述性语言
+
+
+
+
+java开发阶段
+	eclipse ->  web project  ->框架整合(jar)  -->手动部署到tomcat
+	企业级开发
+	springboot-cli(start.spring.io) -> 写代码 -调试代码
+
+
+前端开发
+	创建项目结构  html/css/js/images  ->编写代码es5 -> 手动部署到apache -> 访问测试
+
+	npm  init  babel es6 -> es5 
+
+	webpack
+
+
+
+	cordova
+		npm install -g cordova
+	1安装create-react-app
+		npm install -g create-react-app
+	2、使用create-react-app创建react项目
+		create-react-app app01
+
+		app01/
+			package.json
+			node_modules
+			build   产品代码
+				index.html
+				static
+			src   源代码（es6）
+			webpack/babel
+
+	3、启动
+		cd app01
+		npm run start
+
+
+npm init
+npm install
+	遍历package.json文件中的所有依赖，依次进行安装
+npm install xxx@xxx
+	安装指定版本的模块
+npm install --save xxx
+	产品依赖
+npm install --save-dev xxx
+	环境依赖
+npm install -g xxx
+	全局安装
+npm uninstall xxx
+npm run xxx
+
+
+yarn   安装
+	yarn --version
+	yarn init
+	yarn add xxx@xxx
+		产品依赖
+	yarn add --dev xxx@xxx
+		环境依赖
+	yarn upgrade xxx
+
+	yarn remove xxx
+
+
+1、分析项目
+	index.html
+		<body>
+			<div id="root"></div>
+		</body>
+
+2、组件
+	组件是react中的页面元素的小单元，可以是一个按钮。也可以是一个列表，可以是一个模态框，还可以是一个页面。组件一般是特殊的自定义标签，这个标签中可能包含了
+	--组件如何定义
+		---通过函数定义组件
+			function List(){
+				return (
+					<ul>
+						<li>one</li>
+						<li>two</li>
+						<li>three</li>
+					</ul>
+				);
+			}
+			export default List；
+	--组件如何使用
+			import List from './List'
+		</List>
+	--组件传值
+		父组件在调用子组件的时候位子组员传递参数
+		App.js
+			<List a="" b="" c=""></List>
+		子组件通过函数中的props属性获取传递的参数
+			function List(props){
+				a:""
+				b:""
+			}
+		
+3、JSX
+	JavaScript XML在JavaScript
+		--文本渲染
+			将变量的值绑定到对应的标签上
+			{msg}
+		--列表渲染
+			将集合遍历输出
+			<ul>
+				data.map(function(item,index){
+						return <li key={index}>{item}</li>
+				})
+			</ul>
+		--条件渲染
+			
+		
