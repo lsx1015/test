@@ -124,5 +124,58 @@ yarn   安装
 				})
 			</ul>
 		--条件渲染
-			
+
+
+模块
+	函数模块
+		1、导入模块
+			import React from 'react'
+		2、定义模块
+			function List(){
+				return (
+					<div>
+						<div></div>
+						<p></p>	
+					</div>
+					<!-- 只能一个div -->
+				)
+			}
+		3、暴露模块
+			export List;
+	应用组件
+		import List from '/List';
+		<List />
+	
+		父组件传值给子组件
+			1、如果字符串
+				<List a=""/>
+			2、传值非字符串
+				<List b={}/>
+	渲染
+			1、文本渲染
+			let msg = "";
+			let dom = <div>{msg}</div>
+			2、
+
+
+
+
+
+
+
+	class	Person extends Object{
+		construtor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		sayName(){
+
+		}
+		sayAge(){
+
+		}
+		
+	8、使用类创建组件
+		
+	}
 		
